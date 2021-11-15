@@ -1,7 +1,18 @@
 const buttons =$("#color, #background");
-const inputs = $("input");
-const text = $(".text-box");
+const textArea = $(".text-box");
 let propertyName = 'color';
+
+function hexFromRGB(r, g, b) {
+  const hex = [r.toString(16), g.toString(16), b.toString(16)];
+
+  $.each(hex, function (nr, val) {
+    if (val.length === 1) {
+      hex[nr] = "0" + val;
+    }
+  });
+
+  return hex.join("").toUpperCase();
+}
 
 function setPropertyName() {
   buttons.removeClass("ui-state-active");
@@ -9,20 +20,32 @@ function setPropertyName() {
   if (this.id == "color") {
     propertyName = "color";
     $(this).addClass("ui-state-active");
-  }
-  else if (this.id == "background") {
+  } else if (this.id == "background") {
     propertyName = "background-color";
     $(this).addClass("ui-state-active");
   }
 }
 
-function changeColor() {
-  const red = $("#red").val();
-  const green = $("#green").val();
-  const blue = $("#blue").val();
+function refreshColor() {
+  const red = $("#red").slider("value");
+  const green = $("#green").slider("value");
+  const blue = $("#blue").slider("value");
+  const hex = hexFromRGB(red, green, blue);
 
-  text.css(propertyName, `rgb(${red}, ${green}, ${blue})`)
+  textArea.css(propertyName, "#" + hex);
 }
 
+$("#red, #green, #blue").slider({
+  orientation: "horizontal",
+  range: "min",
+  max: 255,
+  value: 127,
+  slide: refreshColor,
+  change: refreshColor
+});
+
+$( "#red" ).slider( "value", 255 );
+$( "#green" ).slider( "value", 140 );
+$( "#blue" ).slider( "value", 60 );
+
 buttons.click(setPropertyName);
-inputs.change(changeColor);

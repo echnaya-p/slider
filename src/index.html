@@ -4,20 +4,21 @@
     <meta charset="utf-8">
     <title>Slider</title>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-    <fieldset>
-        <legend>Select: </legend>
-        <input type="button" id="color" class="ui-button ui-widget ui-corner-all ui-state-active" value="color">
-        <input type="button" id="background" class="ui-button ui-widget ui-corner-all" value="backgroundColor">
-    </fieldset>
-    <div class="box">
-        <div class="input-box">
-            <input type="range" id="red" min="0" max="255" class="ui-slider">
-            <input type="range" id="green" min="0" max="255">
-            <input type="range" id="blue" min="0" max="255">
+    <div class="button-box">
+        <fieldset>
+            <legend>Select: </legend>
+            <input type="button" id="color" class="ui-button ui-widget ui-corner-all ui-state-active" value="color">
+            <input type="button" id="background" class="ui-button ui-widget ui-corner-all" value="backgroundColor">
+        </fieldset>
+    </div>
+    <div class="range-text-box">
+        <div class="range-box">
+            <div id="red"></div>
+            <div id="green"></div>
+            <div id="blue"></div>
         </div>
         <div class="text-box">
             <p>
@@ -29,7 +30,8 @@
             </p>
         </div>
     </div>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
