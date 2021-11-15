@@ -1,0 +1,38 @@
+.box {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.input-box {
+    padding: 5px;
+    width: 40%;
+}
+
+.input-box input {
+    width: 100%;
+    margin: 10px;
+}
+
+.text-box {
+    border: 1px solid gray;
+    width: 50%;
+    margin: 10px;
+}
+
+.text-box p {
+    padding: 5px;
+}
+
+#red, #green, #blue {
+    float: left;
+    clear: left;
+    width: 300px;
+    margin: 15px;
+}
+
+#red .ui-slider-range { background: #ef2929; }
+#red .ui-slider-handle { border-color: #ef2929; }
+#green .ui-slider-range { background: #8ae234; }
+#green .ui-slider-handle { border-color: #8ae234; }
+#blue .ui-slider-range { background: #729fcf; }
+#blue .ui-slider-handle { border-color: #729fcf; }

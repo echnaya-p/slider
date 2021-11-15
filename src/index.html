@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Slider</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>Select: </legend>
+        <input type="button" id="color" class="ui-button ui-widget ui-corner-all ui-state-active" value="color">
+        <input type="button" id="background" class="ui-button ui-widget ui-corner-all" value="backgroundColor">
+    </fieldset>
+    <div class="box">
+        <div class="input-box">
+            <input type="range" id="red" min="0" max="255" class="ui-slider">
+            <input type="range" id="green" min="0" max="255">
+            <input type="range" id="blue" min="0" max="255">
+        </div>
+        <div class="text-box">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Cras tincidunt posuere ante, id lacinia nunc facilisis quis.
+                Vivamus accumsan cursus turpis, id volutpat massa eleifend sit amet.
+                Vivamus fermentum accumsan orci, ac congue augue sodales ac.
+                Cras venenatis congue arcu. Praesent luctus ante condimentum auctor laoreet.
+            </p>
+        </div>
+    </div>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+</body>
+</html>
