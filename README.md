@@ -6,4 +6,4 @@
 http://service.crazypanda.ru/v/clip2net/f/n/tQwmFyAgmw.png
 
 ## Реализация
-(добавить ссылку)
+https://echnaya-p.github.io/slider/
